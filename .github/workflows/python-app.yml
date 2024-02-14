@@ -49,8 +49,8 @@ jobs:
       uses: AndreMiras/coveralls-python-action@v20201129
       with:
         github-token: ${{ github.token }}
-        parallel: true
-        flag-name: Unit Test
+        parallel: false
+        # flag-name: Unit Test
 
 
   coveralls_finish:
@@ -60,3 +60,4 @@ jobs:
       uses: AndreMiras/coveralls-python-action@develop
       with:
         parallel-finished: true
+
