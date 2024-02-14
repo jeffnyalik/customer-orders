@@ -1,4 +1,4 @@
-# Welcome to Django and Docker summary with Github Actions
+## Welcome to Django and Docker summary with Github Actions
 
 ![](https://github.com/jeffnyalik/docker-summary/actions/workflows/python-app.yml/badge.svg)
 
