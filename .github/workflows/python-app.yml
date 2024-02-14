@@ -48,6 +48,7 @@ jobs:
     - name: Coveralls Python
       uses: AndreMiras/coveralls-python-action@v20201129
       with:
+        github-token: ${{ github.token }}
         parallel: true
         flag-name: Unit Test
 
