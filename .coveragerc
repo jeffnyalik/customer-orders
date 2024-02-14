@@ -1,0 +1,15 @@
+[run]
+source = .
+omit = 
+    *myenv/*
+    *manage.py
+    */core/settings.py
+    */core/__init__.py                              
+    */core/asgi.py                                   
+    */core/urls.py                                 
+    */core/wsgi.py   
+    */snipptes/__init__.py
+    */snipptes/admin.py
+    */snipptes/apps.py 
+    */snipptes/migrations/*
+    *migrations/*
