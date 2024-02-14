@@ -1,6 +1,7 @@
 ## Welcome to Django and Docker summary with Github Actions
 
-![](https://github.com/jeffnyalik/docker-summary/actions/workflows/python-app.yml/badge.svg) ![](https://github.com/jeffnyalik/docker-summary/actions/workflows/python-app.yml/badge.svg?event=push)
+   ![](https://github.com/jeffnyalik/docker-summary/actions/workflows/python-app.yml/badge.svg) [![Coverage Status](https://coveralls.io/repos/github/jeffnyalik/docker-summary/badge.svg?branch=master)](https://coveralls.io/github/jeffnyalik/docker-summary?branch=master)
+
 
 > <b>This is just a summary of django and docker configuration with github actions </b>
 > 
