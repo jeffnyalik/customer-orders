@@ -8,6 +8,9 @@ omit =
     */core/asgi.py                                   
     */core/urls.py                                 
     */core/wsgi.py   
+    */api/models.py
+    */snipptes/models.py
+    */snipptes/views.py
     */snipptes/__init__.py
     */snipptes/admin.py
     */snipptes/apps.py 
