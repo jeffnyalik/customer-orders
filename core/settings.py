@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-*+mm4g2c88uqcwj_g+h119qseqldz223d%z1b*r)=8d3m1n8a&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -40,8 +40,16 @@ INSTALLED_APPS = [
     'snipptes',
     'api',
     'rest_framework',
+    'oauth2_provider'
     
 ]
+
+LOGIN_URL='/admin/login/'
+
+## Africastalking configs
+AFRICASTALKING_USERNAME = 'sandbox'
+AFRICASTALKING_API_KEY = 'f2e9836cb290ba3597e5addeca1e7081d3b10e093f54599950bbb885426fa898' #Sandbox API Key
+SENDER_SHORT_CODE = '11184'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

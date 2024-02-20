@@ -3,6 +3,7 @@ from django.db import models
 class Customer(models.Model):
     name = models.CharField(blank=True, null=True, max_length=250)
     code = models.CharField(blank=True, null=True, max_length=50)
+    phone_number = models.CharField(blank=True, null=True, max_length=255) ## For sending sms alert upon successful order
 
     def __str__(self) -> str:
         return f"{self.name} + {self.code}"

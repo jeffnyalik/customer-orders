@@ -5,7 +5,7 @@ from rest_framework import status
 class CustomerAPIViewTest(TestCase):
     def setUp(self):
         self.client = APIClient()
-        self.customer_data = {'name': 'customera', 'code': 'code2030'}
+        self.customer_data = {'name': 'customera', 'code': 'code2030', 'phone_number': '+254716431039'}
     
     def test_create_customers(self):
         url = "/api/v1/customers/"

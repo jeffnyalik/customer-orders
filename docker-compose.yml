@@ -4,11 +4,11 @@ services:
   django:
     image: django-docker:0.0.1
     build: .
-    command: python manage.py runserver 0.0.0.0:7000
+    command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/usr/src/app
     ports:
-      - '7000:7000'
+      - '8000:8000'
 
 #     depends_on:
 #       - pgdb
