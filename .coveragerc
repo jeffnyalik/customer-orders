@@ -9,6 +9,9 @@ omit =
     */core/urls.py                                 
     */core/wsgi.py   
     */api/models.py
+    */authentication/views.py 
+    */api/sms_callback_view.py  
+    */authentication/models.py
     */snipptes/models.py
     */snipptes/views.py
     */snipptes/__init__.py

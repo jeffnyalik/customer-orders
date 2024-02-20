@@ -4,14 +4,17 @@ from serializers.customers.customers import CustomerSerializer
 from serializers.orders.orders import OrderSerializer
 import africastalking
 from django.conf import settings
+from rest_framework import permissions
 
 
 class CustomersViewSets(viewsets.ModelViewSet):
+    permission_classes = [permissions.IsAuthenticated]
     queryset = Customer.objects.all()
     serializer_class = CustomerSerializer
 
 
 class OrdersViewSets(viewsets.ModelViewSet):
+    permission_classes = [permissions.IsAuthenticated]
     queryset = Order.objects.all()
     serializer_class = OrderSerializer
 

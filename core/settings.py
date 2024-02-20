@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +27,7 @@ SECRET_KEY = 'django-insecure-*+mm4g2c88uqcwj_g+h119qseqldz223d%z1b*r)=8d3m1n8a&
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-
+AUTH_USER_MODEL = 'authentication.CustomUser'
 
 # Application definition
 
@@ -37,14 +38,25 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'snipptes',
     'api',
+    'authentication',
     'rest_framework',
+    'rest_framework.authtoken',
     'oauth2_provider'
     
 ]
 
 LOGIN_URL='/admin/login/'
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'oauth2_provider.contrib.rest_framework.OAuth2Authentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    )
+}
 
 ## Africastalking configs
 AFRICASTALKING_USERNAME = 'sandbox'
