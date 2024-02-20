@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'authentication',
     'rest_framework',
     'rest_framework.authtoken',
-    'oauth2_provider'
+    'oauth2_provider',
+    'corsheaders'
     
 ]
 
@@ -64,6 +65,7 @@ AFRICASTALKING_API_KEY = 'f2e9836cb290ba3597e5addeca1e7081d3b10e093f54599950bbb8
 SENDER_SHORT_CODE = '11184'
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -72,6 +74,22 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+CORS_ALLOWED_ORIGINS = [
+    "https://691c-105-29-165-231.ngrok-free.app",
+    "http://127.0.0.1:4040",
+    "http://localhost:8000",
+    "http://127.0.0.1:3000",
+]
+
+CORS_ALLOW_METHODS = (
+    "DELETE",
+    "GET",
+    "OPTIONS",
+    "PATCH",
+    "POST",
+    "PUT",
+)
 
 ROOT_URLCONF = 'core.urls'
 
