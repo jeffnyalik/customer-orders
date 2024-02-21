@@ -12,10 +12,16 @@ services:
 
     depends_on:
       - pgdb
+    links:
+      - pgdb:pgdb
+    networks:
+      - djangonetwork
   
   pgdb:
       image: postgres
       container_name: pgdb
+      networks:
+          - djangonetwork
       environment:
              - POSTGRES_DB=customer_orders_db
              - POSTGRES_USER=postgres
@@ -26,6 +32,10 @@ services:
         - "5432"
       ports:
         - "5432:5432"
+
+networks:
+    djangonetwork:
+        driver: bridge
 
 volumes:
     pgdata:
