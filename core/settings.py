@@ -151,7 +151,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 ## Postgresql database configuration
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'customer_orders_db',
         'USER': 'postgres',
         'PASSWORD': 'nodejs12',
