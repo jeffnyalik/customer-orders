@@ -9,3 +9,7 @@ __pycache__
 htmlcov
 htmlcov/
 /htmlcov
+db.sqlite3/
+/db.sqlite3/
+db.sqlite3
+sqlite3

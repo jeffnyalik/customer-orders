@@ -7,7 +7,7 @@ Additionally, you need to create a REST or GraphQL API to input and upload custo
     Prerequisites:
     1.Docker
     2.Django OAuth2 Toolkit - OpenID Connect
-    3.PostgreSQL</li>
+    3.PostgreSQL
     4.Africa's Talking SMS Gateway
     5.Django & Django Rest Framework
     6.Throttling API Rate Limiting(Configured globally)
