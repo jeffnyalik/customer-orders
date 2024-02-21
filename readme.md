@@ -25,6 +25,20 @@ Create a PostgreSQL database with the name  `customers_orders_db`.
 	```
 4.Build and run the Docker containers:
 	``` docker-compose up -d or docker-compose up --build ```
+
+Africastalking Config:
+`` python3 -m pip install africastalking``
+```
+## Africastalking configs/ settings.py file
+AFRICASTALKING_USERNAME = 'sandbox'
+AFRICASTALKING_API_KEY= #Sandbox API Key
+SENDER_SHORT_CODE = '1234' #Your sandbox shortcode
+```
+Sample Request and Response:
+![](images/order_two.png)
+Upon making an order request, the customer will get an sms alert as shown below:
+![](images/order_one.png)
+
 ####  API Endpoints
 ![](images/apis.png)
 
