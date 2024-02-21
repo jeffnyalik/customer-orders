@@ -26,17 +26,17 @@ Create a PostgreSQL database with the name  `customers_orders_db`.
 4.Build and run the Docker containers:
 	``` docker-compose up -d or docker-compose up --build ```
 ####  API Endpoints
-```GET api/v1/customers ```
-```POST api/v1/customers ```
-```GET api/v1/orders ```
-```POST api/v1/orders ```
+![](images/apis.png)
+
+####  Authentication Endpoints
+![](images/auth_endpoints.png)
 
 ####  Authentication and Authorization
 This project implements authentication and authorization using Django OAuth Toolkit with OpenID Connect. To set up authentication and obtain the necessary credentials, please follow these steps:
 
 `` pip install django-oauth-toolkit``
 
-`` `
+```
 1.  Configure the OpenID Connect provider with the necessary client credentials and scopes.
     
 2.  Update the OAuth Toolkit configuration in  `settings.py`  to match your OpenID Connect provider settings.
@@ -45,3 +45,4 @@ This project implements authentication and authorization using Django OAuth Tool
     
 4.  Restart the Docker containers:
 ```
+
