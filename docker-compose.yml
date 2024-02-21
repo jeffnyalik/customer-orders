@@ -9,11 +9,8 @@ services:
       - .:/usr/src/app
     ports:
       - '8000:8000'
-
     depends_on:
       - pgdb
-    links:
-      - pgdb:pgdb
     networks:
       - djangonetwork
   
@@ -28,14 +25,14 @@ services:
              - POSTGRES_PASSWORD=nodejs12
       volumes:
              - pgdata:/var/lib/postgresql/data/
+      restart: always
       expose:
         - "5432"
       ports:
         - "5432:5432"
 
-networks:
-    djangonetwork:
-        driver: bridge
-
 volumes:
     pgdata:
+networks:
+  djangonetwork:
+    driver: bridge
