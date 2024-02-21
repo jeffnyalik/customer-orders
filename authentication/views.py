@@ -25,11 +25,15 @@ class LoginApiView(APIView):
     
         if user is not None and user.check_password(password):
             login(request, user)
-
+            
+            """
+            clientid=zAEdINoYPECSC1YaXZ4IWEGUbOGKs2SPPR209Inz
+            client_secret=VkLuhS4WYQip7gaDWvbOR54kl5uOXwJO8d5PtFzSB0Us2VE7KOc0zinZ2KSGYutYKnT3PPpAHhJxD5tHcPB4Btpr7Kz1x93RjXP5oIXOIqDgQLnkkdbqlZXlSrFhRj7P
+            """
             # Obtain access token
             token_endpoint = 'http://localhost:8000/o/token/'
-            client_id = 'S742QUin9WoyRoS8AYYqDa0pROr6EfVapuHZN3Dn'
-            client_secret = 'GnCdc0XwRiHAQVfGSkpFsaBDiu1MT1HQOkot3U0DngiyfVgQuqVCKndSRnEMOOFqqybSJtUyQEPOVSVHWLy30E60CJ0smI9kZWj73c0vWvTJBAkuEl1xYYGSgq9xh4UT'
+            client_id = 'zAEdINoYPECSC1YaXZ4IWEGUbOGKs2SPPR209Inz'
+            client_secret = 'VkLuhS4WYQip7gaDWvbOR54kl5uOXwJO8d5PtFzSB0Us2VE7KOc0zinZ2KSGYutYKnT3PPpAHhJxD5tHcPB4Btpr7Kz1x93RjXP5oIXOIqDgQLnkkdbqlZXlSrFhRj7P'
 
            
             token_request_data = {

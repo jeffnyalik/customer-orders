@@ -10,18 +10,18 @@ services:
     ports:
       - '8000:8000'
 
-#     depends_on:
-#       - pgdb
+    depends_on:
+      - pgdb
   
-#   pgdb:
-#       image: postgres
-#       container_name: pgdb
-#       environment:
-#              - POSTGRES_DB=docker_db
-#              - POSTGRES_USER=postgres
-#              - POSTGRES_PASSWORD=nodejs12
-#       volumes:
-#              - pgdata:/var/lib/postgresql/data/
+  pgdb:
+      image: postgres
+      container_name: pgdb
+      environment:
+             - POSTGRES_DB=customer_orders_db
+             - POSTGRES_USER=postgres
+             - POSTGRES_PASSWORD=nodejs12
+      volumes:
+             - pgdata:/var/lib/postgresql/data/
 
-# volumes:
-#     pgdata:
+volumes:
+    pgdata:

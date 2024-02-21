@@ -59,6 +59,27 @@ REST_FRAMEWORK = {
     )
 }
 
+
+
+# Specify the OAuth2 scopes
+OAUTH2_PROVIDER = {
+    'SCOPES': {
+        'read': 'Read scope description',
+        'write': 'Write scope description',
+        'groups': 'Access to your groups',
+    }
+}
+
+OAUTH2_PROVIDER = {
+    "OIDC_ENABLED": True,
+    "SCOPES": {
+        "openid": "OpenID Connect scope",
+        # ... any other scopes that you use
+    },
+    # ... any other settings you want
+}
+
+
 ## Africastalking configs
 AFRICASTALKING_USERNAME = 'sandbox'
 AFRICASTALKING_API_KEY = 'f2e9836cb290ba3597e5addeca1e7081d3b10e093f54599950bbb885426fa898' #Sandbox API Key
@@ -115,12 +136,30 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+#Sqlite internal db configuration
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+## end
+
+
+## Postgresql database configuration
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'customer_orders_db',
+        'USER': 'postgres',
+        'PASSWORD': 'nodejs12',
+        'HOST': 'pgdb',
+        'PORT': 5432,
     }
 }
+## end 
 
 
 # Password validation
