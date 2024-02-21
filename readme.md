@@ -64,7 +64,7 @@ docs: https://django-oauth-toolkit.readthedocs.io/en/latest/install.html
 To register an app, you have to go to 
 `[http://localhost:8000/o/applications/]`
 
-Her you will grab the `client_id` and` client_secret`.
+Here you will grab the `client_id` and` client_secret`.
 You can get ConnectDiscoveryInfoView
 
 Available at  `/o/.well-known/openid-configuration`, this view provides auto discovery information to OIDC clients, telling them the JWT issuer to use, the location of the JWKs to verify JWTs with, the token and userinfo endpoints to query, and other details.
