@@ -78,3 +78,13 @@ The token can be used to authenticate and authorize for the next subsequent API 
 
 #### DiscoveryInfoView Endpoints
 ![](images/openid_config.png)
+
+
+#### Successful Login
+![](images/login_success.png)
+
+
+###  Author
+Jeff Nyalik - <a href="https://github.com/jeffnyalik">GitHubProfile </a>
+
+``Happy Coding!!.``
