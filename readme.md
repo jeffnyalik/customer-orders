@@ -60,3 +60,21 @@ This project implements authentication and authorization using Django OAuth Tool
 4.  Restart the Docker containers:
 ```
 
+docs: https://django-oauth-toolkit.readthedocs.io/en/latest/install.html
+To register an app, you have to go to 
+`[http://localhost:8000/o/applications/]`
+
+Her you will grab the `client_id` and` client_secret`.
+You can get ConnectDiscoveryInfoView
+
+Available at  `/o/.well-known/openid-configuration`, this view provides auto discovery information to OIDC clients, telling them the JWT issuer to use, the location of the JWKs to verify JWTs with, the token and userinfo endpoints to query, and other details.
+
+I have created a custom user that uses the token  endpoint for generating access token upon successful login.
+`  
+token_endpoint
+
+`[http://localhost:8000/o/token/]`
+The token can be used to authenticate and authorize for the next subsequent API calls.
+
+#### DiscoveryInfoView Endpoints
+![](images/openid_config.png)
