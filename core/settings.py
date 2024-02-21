@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'oauth2_provider',
     'corsheaders',
-    'rest_framework_swagger',
     'drf_yasg' 
     
 ]
