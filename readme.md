@@ -10,6 +10,7 @@ Additionally, you need to create a REST or GraphQL API to input and upload custo
     3.PostgreSQL</li>
     4.Africa's Talking SMS Gateway
     5.Django & Django Rest Framework
+    6.Throttling API Rate Limiting(Configured globally)
 
 <h4>Installation</h4>
 1. Clone the repository from GitHub
@@ -41,6 +42,12 @@ Upon making an order request, the customer will get an sms alert as shown below:
 
 ####  API Endpoints
 ![](images/apis.png)
+
+The API endpoints uses Throttling or Rate Limiting for both a user and a non user.
+The response you get when one exceeds the number of throttles per second.
+``{
+    "detail": "Request was throttled. Expected available in 86391 seconds."
+}``
 
 ####  Authentication Endpoints
 ![](images/auth_endpoints.png)
