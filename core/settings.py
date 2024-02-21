@@ -157,6 +157,9 @@ DATABASES = {
         'PASSWORD': 'nodejs12',
         'HOST': 'pgdb',
         'PORT': 5432,
+        'TEST': {
+            'NAME': 'customer_orders_db',
+        }
     }
 }
 ## end 
